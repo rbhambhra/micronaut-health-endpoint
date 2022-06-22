@@ -1,7 +1,16 @@
 micronaut:
   application:
     name: micronautHealthEndpoint
+  server:
+    context-path: /mycontext
 netty:
   default:
     allocator:
       max-order: 3
+endpoints:
+  all:
+    path: admin
+  health:
+    enabled: true
+    sesitive: false
+    details-visible: ANONYMOUS
